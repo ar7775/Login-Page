@@ -1,0 +1,35 @@
+
+<div class="body">
+    <div class="login" alt="">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+  
+        <img src="../../../assets/img/nokia_logo.png" width="50%" height="80%">
+        <h1 class="h3 mb-3 fw-normal">Login</h1>
+  
+        <mat-form-field class="ancho" appearance="fill">
+          <mat-icon matPrefix>account_circle</mat-icon>
+          <mat-label>Email</mat-label>
+          <input type="text" matInput autocomplete="off" formControlName="User">
+          <mat-error *ngIf="!isValid('email', 'email')">
+            Please enter valid email
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field class="ancho" appearance="fill">
+          <mat-icon matPrefix>lock</mat-icon>
+          <mat-label>Password</mat-label>
+          <input matInput autocomplete="off" formControlName="Password" [type]="showPassword ? 'text' : 'password'" name="password">
+          <mat-icon matSuffix (click)="togglePasswordVisibility()">
+            {{showPassword?'visibility_off':'visibility'}}
+          </mat-icon>
+          <mat-error *ngIf="!isValid('password', 'minlength')">
+            Password should be minimum 6 characters
+          </mat-error>
+        </mat-form-field>
+  
+        <button class="ancho button" mat-raised-button mat-button color="primary"
+          [disabled]="form.invalid">Submit</button>
+  
+      </form>
+    </div>
+  </div>

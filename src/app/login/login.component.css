@@ -1,0 +1,22 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d5fc1;
+    height: 100%;
+  }
+  .login {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .ancho {
+    width: 80%;
+  }
+
